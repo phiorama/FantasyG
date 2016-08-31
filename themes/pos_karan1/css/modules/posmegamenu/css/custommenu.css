@@ -1,0 +1,38 @@
+.oneline, .pt_custommenu .pt_menu .popup .block1 .column .itemMenuName, .pt_custommenu_mobile .navbar .navbar-inner .btn-navbar, ul#pt_custommenu_itemmobile li a { display: block; word-wrap: break-word; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+
+.megamenu_container { text-align: center; margin: 43px 0 49px; float: left; }
+@media (max-width: 1199px) { .megamenu_container { margin: 0 0 25px; } }
+
+.pt_custommenu { position: relative; line-height: 1; }
+.pt_custommenu .pt_menu { display: inline-block; text-align: left; vertical-align: bottom; }
+.pt_custommenu .pt_menu .parentMenu a { display: block; overflow: hidden; position: relative; margin: 0; padding: 0 10px; line-height: 33px; color: #222222; text-transform: capitalize; letter-spacing: 0.1em; font-size: 16px; font-weight: 700; }
+.pt_custommenu .pt_menu .parentMenu a i { font-size: 12px; line-height: 33px; float: right; padding: 0 0 0 5px; }
+.pt_custommenu .pt_menu .parentMenu a i:before { content: "\f107"; }
+.pt_custommenu .pt_menu .popup { position: absolute; background: white; border: 1px solid #d6d4d4; }
+@media (max-width: 1199px) { .pt_custommenu .pt_menu .popup { left: 0 !important; width: 100% !important; } }
+.pt_custommenu .pt_menu .popup .block1 { overflow: hidden; float: left; padding: 30px; }
+.pt_custommenu .pt_menu .popup .block1 .column { float: left; width: 160px; padding: 0; margin: 0 20px; margin-bottom: -99999px; padding-bottom: 99999px; }
+.pt_custommenu .pt_menu .popup .block1 .column .itemMenuName { color: #222222; line-height: 35px; text-transform: capitalize; margin-bottom: 15px; border-bottom: 1px solid #d6d4d4; font-weight: 600; font-size: 16px; }
+.pt_custommenu .pt_menu .popup .block1 .column .itemMenuName:hover { color: #fe0000; }
+.pt_custommenu .pt_menu .popup .block1 .column .itemMenuName.nochild { padding: 0; background: none; border-bottom: 0; margin: 0; }
+.pt_custommenu .pt_menu .popup .block1 .column .itemSubMenu { padding: 0; }
+.pt_custommenu .pt_menu .popup .block1 .column .itemSubMenu .itemMenuName { line-height: 35px; padding: 0; text-transform: capitalize; background: none; color: #777; border-bottom: 0; margin: 0; font-size: 15px; font-weight: 600; }
+.pt_custommenu .pt_menu .popup .block1 .column .itemSubMenu .itemMenuName:before { content: "\f101"; display: block; line-height: 35px; float: left; padding-right: 7px; font-family: "FontAwesome"; font-size: 12px; font-weight: 400; }
+.pt_custommenu .pt_menu .popup .block1 .column .itemSubMenu .itemMenuName:hover { color: #fe0000; }
+.pt_custommenu .pt_menu.act .parentMenu a, .pt_custommenu .pt_menu.active .parentMenu a { color: #fe0000; }
+
+.pt_custommenu_mobile { text-align: left; position: static; background: #333333; padding: 0 15px; margin-top: 30px; clear: both; float: left; width: 100%; }
+.pt_custommenu_mobile .navbar { min-height: 35px; margin: 0; border: 0; position: static; }
+.pt_custommenu_mobile .navbar .navbar-inner .btn-navbar { display: block; color: white; position: relative; margin: 0; line-height: 55px; text-transform: uppercase; font-size: 14px; font-weight: 600; }
+.pt_custommenu_mobile .navbar .navbar-inner .btn-navbar:after { display: block; position: absolute; top: 0; right: 0; width: 35px; height: 35px; text-align: center; color: white; font-size: 15px; font-weight: 400; font-family: "FontAwesome"; }
+.pt_custommenu_mobile .navbar .navbar-inner.navbar-inactive .btn-navbar:after { content: "\f055"; }
+.pt_custommenu_mobile .navbar .navbar-inner.navbar-active .btn-navbar:after { content: "\f056"; }
+
+ul#pt_custommenu_itemmobile { overflow: hidden; margin: 0 0 15px; padding: 0; }
+ul#pt_custommenu_itemmobile li { background: #fff; cursor: pointer; list-style-type: none; padding: 0 20px; margin: 0; display: block; position: relative; }
+ul#pt_custommenu_itemmobile li a { line-height: 35px; text-transform: capitalize; text-decoration: none; font-size: 15px; font-weight: 700; }
+ul#pt_custommenu_itemmobile li a:hover { color: #fe0000; }
+ul#pt_custommenu_itemmobile li .grower { position: absolute; top: 0; right: 0; }
+ul#pt_custommenu_itemmobile li .grower a:after { display: block; width: 35px; height: 35px; text-align: center; color: #222222; font-size: 13px; font-weight: 400; font-family: "FontAwesome"; }
+ul#pt_custommenu_itemmobile li .grower.CLOSE a:after { content: "\f055"; }
+ul#pt_custommenu_itemmobile li .grower.OPEN a:after { content: "\f056"; }

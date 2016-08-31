@@ -1,0 +1,195 @@
+@import "compass";
+@import "theme_variables";
+
+.nivoSlider {
+	position: relative;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	img {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		max-width: none;
+	}
+	/* If an image is wrapped in a link */
+	a.nivo-imageLink {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: 0;
+		padding: 0;
+		margin: 0;
+		z-index: 6;
+		display: none;
+		background: #fff;
+	}
+}
+.nivo-main-image {
+	display: block !important;
+	position: relative !important;
+	width: 100% !important;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display: block;
+	position: absolute;
+	z-index: 5;
+	height: 100%;
+	top: 0;
+}
+.nivo-box {
+	display: block;
+	position: absolute;
+	z-index: 5;
+	overflow: hidden;
+	img {
+		display: block;
+	}
+}
+/* Caption styles */
+.nivo-caption {
+	display: none;
+}
+.nivo-html-caption {
+    display: none;
+}
+/* slideshow edit */
+.slideshow_container{
+	overflow: hidden;
+	.pos-slideshow{
+		position: relative;
+		padding-bottom: 35px;
+		@media (max-width: $screen-md-max){
+			padding-bottom: 0;
+		}
+		.flexslider{
+			position: relative;
+		}
+		.nivo-directionNav a{
+			display: block;
+			width: 40px;
+			height: 70px;
+			line-height: 70px;
+			border: 0;
+			background: rgba(0, 0, 0, 0.15);
+			color: $light-text-color;
+			text-align: center;
+			font-size: 21px;
+			position: absolute;
+			z-index: 9;
+			cursor: pointer;
+			top: 45%;
+			@include border-radius(25px);
+			@media (max-width: 640px){
+				display: none;
+			}
+			&.nivo-prevNav{
+				left: 10px;
+			}
+			&.nivo-nextNav{
+				right: 10px;
+			}
+			&:hover{
+				background: $main-color;
+			}
+		}
+		.nivo-controlNav{
+			position: absolute;
+			bottom: 1.1vw;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			z-index: 10;
+			a{
+				display: inline-block;
+				margin: 0 3px;
+				cursor: pointer;
+				font-size: 0;
+				width: 13px;
+				height: 13px;
+				background: #ebebeb;
+				@include box-shadow(inset 0 0 0 3px #acacac);
+				@include border-radius(100%);
+				&.active, &:hover{
+					background: #fff;
+					@include box-shadow(inset 0 0 0 3px $main-color);
+				}
+			}
+		}
+		.pos-slideshow-readmore {
+			position: absolute;
+			z-index: 9;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			a{
+				display: block;
+				position: absolute;
+				z-index: 9;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				font-size: 0;
+			}
+		}
+	}
+}
+
+.pos-slideshow-info{
+	position: absolute;
+	top: 17vw;
+	left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 50%;
+	z-index: 10;
+	text-align: center;
+	@include animation(zoomIn 1000ms ease);
+	.desc_center{
+		display: inline-block;
+		overflow: hidden;
+		.txt1{
+			font-size: 3.5vw;
+			line-height: 4vw;
+			letter-spacing: 0.02em;
+			font-weight: 300;
+			color: $main-color;
+			text-transform: uppercase;
+		}
+		.txt2{
+			font-size: 7.5vw;
+			line-height: 8vw;
+			letter-spacing: 0.02em;
+			font-weight: 700;
+			color: $dark-color;
+			text-transform: uppercase;
+		}
+		a.rdmore{
+			display: inline-block;
+			padding: 0 19px;
+			line-height: 50px;
+			text-transform: uppercase;
+			color: $light-text-color;
+			background: $dark-background;
+			font-size: 16px;
+			letter-spacing: 0.02em;
+			margin-top: 1.5vw;
+			&:before{
+				font-family: $font-icon;
+				content: "\f0da";
+				padding-right: 11px;
+				display: block;
+				float: left;
+				
+			}
+			&:hover:before{
+				@include animation(slideright 700ms ease-out infinite);
+			}
+		}
+	}
+}

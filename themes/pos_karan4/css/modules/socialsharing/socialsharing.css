@@ -1,0 +1,10 @@
+.oneline { display: block; word-wrap: break-word; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+
+.socialsharing_product { overflow: hidden; clear: both; padding-top: 25px; }
+.socialsharing_product .share_label { float: left; display: block; line-height: 30px; font-size: 12px; font-weight: 700; color: #222222; text-transform: uppercase; padding-right: 10px; }
+.socialsharing_product .btn-default { width: 30px; height: 30px; border: 1px solid #ececec; display: block; float: left; margin-left: 11px; -webkit-border-radius: 100%; -moz-border-radius: 100%; -ms-border-radius: 100%; -o-border-radius: 100%; border-radius: 100%; text-align: center; color: #d3d3d3; overflow: hidden; font-size: 0; padding: 0; }
+.socialsharing_product .btn-default i { font-size: 12px; line-height: 28px; }
+.socialsharing_product .btn-default.btn-twitter:hover { border-color: #00aaf0; }
+.socialsharing_product .btn-default.btn-facebook:hover { border-color: #435f9f; }
+.socialsharing_product .btn-default.btn-google-plus:hover { border-color: #e04b34; }
+.socialsharing_product .btn-default.btn-pinterest:hover { border-color: #ce1f21; }

@@ -1,0 +1,17 @@
+@import "compass";
+@import "theme_variables";
+
+.user_header.userinfo{
+	margin: 5px 0;
+	a{
+		display: block;
+		color: $dark-color;
+		font-size: 13px;
+		line-height: 30px;
+		letter-spacing: 0.04em;
+		font-weight: 600;
+		&:hover{
+			color: $main-color;
+		}
+	}
+}

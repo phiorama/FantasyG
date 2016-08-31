@@ -1,0 +1,196 @@
+@import "compass";
+@import "theme_variables";
+
+.nivoSlider {
+	position: relative;
+	width: 100%;
+	height: auto;
+	img {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		max-width: none;
+	}
+	/* If an image is wrapped in a link */
+	a.nivo-imageLink {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: 0;
+		padding: 0;
+		margin: 0;
+		z-index: 6;
+		display: none;
+		background: #fff;
+	}
+}
+.nivo-main-image {
+	display: block !important;
+	position: relative !important;
+	width: 100% !important;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display: block;
+	position: absolute;
+	z-index: 5;
+	height: 100%;
+	top: 0;
+}
+.nivo-box {
+	display: block;
+	position: absolute;
+	z-index: 5;
+	overflow: hidden;
+	img {
+		display: block;
+	}
+}
+/* Caption styles */
+.nivo-caption {
+	display: none;
+}
+.nivo-html-caption {
+    display: none;
+}
+/* slideshow edit */
+.slideshow_container{
+	overflow: hidden;
+	position: relative;
+	overflow: hidden;
+	background: #f3f8fc;
+    padding: 2.5vw 7.5vw 0;
+	@include box-shadow(inset 0px -7.5vw 0px 0px $light-background);
+	.pos-slideshow{
+		position: relative;
+		.flexslider{
+			position: relative;
+		}
+		.nivo-directionNav a{
+			display: block;
+			line-height: 30px;
+			border: 0;
+			color: $dark-color;
+			font-size: 24px;
+			font-weight: 700;
+			text-transform: uppercase;
+			position: absolute;
+			z-index: 9;
+			cursor: pointer;
+			bottom: 3vw;
+			&:after{
+				content: "";
+				display: block;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				border-bottom: 2px solid $dark-color;
+				@include transition(all 300ms ease);
+			}
+			@media (max-width: $screen-sm-max){
+				display: none;
+			}
+			&.nivo-prevNav{
+				left: -5vw;
+			}
+			&.nivo-nextNav{
+				right: -5vw;
+			}
+			&:hover{
+				color: $main-color;
+				&:after{
+					border-color: $main-color;
+				}
+			}
+		}
+		.nivo-controlNav{
+			position: absolute;
+			bottom: 1.1vw;
+			left: 0;
+			width: 100%;
+			text-align: center;
+			z-index: 10;
+			a{
+				display: inline-block;
+				margin: 0 3px;
+				cursor: pointer;
+				font-size: 0;
+				width: 13px;
+				height: 13px;
+				background: #ebebeb;
+				@include box-shadow(inset 0 0 0 3px #acacac);
+				@include border-radius(100%);
+				&.active, &:hover{
+					background: #fff;
+					@include box-shadow(inset 0 0 0 3px $main-color);
+				}
+			}
+		}
+		.pos-slideshow-readmore {
+			position: absolute;
+			z-index: 9;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			a{
+				display: block;
+				position: absolute;
+				z-index: 9;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				font-size: 0;
+			}
+		}
+	}
+}
+
+.pos-slideshow-info{
+	position: absolute;
+	top: 20vw;
+	left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 70%;
+	z-index: 10;
+	text-align: center;
+	@include animation(fadeInUp 1500ms ease);
+	@media (max-width: $screen-xs-max){
+		display: none;
+	}
+	.desc_center{
+		display: inline-block;
+		text-align: center;
+		overflow: hidden;
+		.txt1{
+			font-size: 24px;
+			line-height: 30px;
+			font-weight: 300;
+			color: $light-text-color;
+			text-transform: uppercase;
+			position: relative;
+			padding-top: 11px;
+			display: inline-block;
+			&:after{
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				border-top: 4px solid #fff;
+			}
+		}
+		.txt2{
+			font-size: 4vw;
+			line-height: 4.5vw;
+			font-weight: 700;
+			color: $light-text-color;
+			text-transform: capitalize;
+		}
+	}
+}

@@ -1,0 +1,5 @@
+.oneline { display: block; word-wrap: break-word; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+
+.user_header.userinfo { margin: 5px 0; }
+.user_header.userinfo a { display: block; color: #222222; font-size: 13px; line-height: 30px; letter-spacing: 0.04em; font-weight: 600; }
+.user_header.userinfo a:hover { color: #fe0000; }

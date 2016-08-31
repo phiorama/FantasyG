@@ -1,0 +1,42 @@
+.oneline { display: block; word-wrap: break-word; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+
+.nivoSlider { position: relative; width: 100%; height: auto; /* If an image is wrapped in a link */ }
+.nivoSlider img { position: absolute; top: 0px; left: 0px; max-width: none; }
+.nivoSlider a.nivo-imageLink { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; z-index: 6; display: none; background: #fff; }
+
+.nivo-main-image { display: block !important; position: relative !important; width: 100% !important; }
+
+/* The slices and boxes in the Slider */
+.nivo-slice { display: block; position: absolute; z-index: 5; height: 100%; top: 0; }
+
+.nivo-box { display: block; position: absolute; z-index: 5; overflow: hidden; }
+.nivo-box img { display: block; }
+
+/* Caption styles */
+.nivo-caption { display: none; }
+
+.nivo-html-caption { display: none; }
+
+/* slideshow edit */
+.slideshow_container { overflow: hidden; position: relative; overflow: hidden; background: #f3f8fc; padding: 2.5vw 7.5vw 0; -webkit-box-shadow: inset 0px -7.5vw 0px 0px white; -moz-box-shadow: inset 0px -7.5vw 0px 0px white; box-shadow: inset 0px -7.5vw 0px 0px white; }
+.slideshow_container .pos-slideshow { position: relative; }
+.slideshow_container .pos-slideshow .flexslider { position: relative; }
+.slideshow_container .pos-slideshow .nivo-directionNav a { display: block; line-height: 30px; border: 0; color: #222222; font-size: 24px; font-weight: 700; text-transform: uppercase; position: absolute; z-index: 9; cursor: pointer; bottom: 3vw; }
+.slideshow_container .pos-slideshow .nivo-directionNav a:after { content: ""; display: block; position: absolute; bottom: 0; left: 0; width: 100%; border-bottom: 2px solid #222222; -webkit-transition: all 300ms ease; -moz-transition: all 300ms ease; -o-transition: all 300ms ease; transition: all 300ms ease; }
+@media (max-width: 991px) { .slideshow_container .pos-slideshow .nivo-directionNav a { display: none; } }
+.slideshow_container .pos-slideshow .nivo-directionNav a.nivo-prevNav { left: -5vw; }
+.slideshow_container .pos-slideshow .nivo-directionNav a.nivo-nextNav { right: -5vw; }
+.slideshow_container .pos-slideshow .nivo-directionNav a:hover { color: #5dc1c3; }
+.slideshow_container .pos-slideshow .nivo-directionNav a:hover:after { border-color: #5dc1c3; }
+.slideshow_container .pos-slideshow .nivo-controlNav { position: absolute; bottom: 1.1vw; left: 0; width: 100%; text-align: center; z-index: 10; }
+.slideshow_container .pos-slideshow .nivo-controlNav a { display: inline-block; margin: 0 3px; cursor: pointer; font-size: 0; width: 13px; height: 13px; background: #ebebeb; -webkit-box-shadow: inset 0 0 0 3px #acacac; -moz-box-shadow: inset 0 0 0 3px #acacac; box-shadow: inset 0 0 0 3px #acacac; -webkit-border-radius: 100%; -moz-border-radius: 100%; -ms-border-radius: 100%; -o-border-radius: 100%; border-radius: 100%; }
+.slideshow_container .pos-slideshow .nivo-controlNav a.active, .slideshow_container .pos-slideshow .nivo-controlNav a:hover { background: #fff; -webkit-box-shadow: inset 0 0 0 3px #5dc1c3; -moz-box-shadow: inset 0 0 0 3px #5dc1c3; box-shadow: inset 0 0 0 3px #5dc1c3; }
+.slideshow_container .pos-slideshow .pos-slideshow-readmore { position: absolute; z-index: 9; top: 0; left: 0; right: 0; bottom: 0; }
+.slideshow_container .pos-slideshow .pos-slideshow-readmore a { display: block; position: absolute; z-index: 9; top: 0; left: 0; right: 0; bottom: 0; font-size: 0; }
+
+.pos-slideshow-info { position: absolute; top: 20vw; left: 0; right: 0; margin: 0 auto; max-width: 70%; z-index: 10; text-align: center; -webkit-animation: fadeInUp 1500ms ease; -moz-animation: fadeInUp 1500ms ease; -ms-animation: fadeInUp 1500ms ease; -o-animation: fadeInUp 1500ms ease; animation: fadeInUp 1500ms ease; }
+@media (max-width: 767px) { .pos-slideshow-info { display: none; } }
+.pos-slideshow-info .desc_center { display: inline-block; text-align: center; overflow: hidden; }
+.pos-slideshow-info .desc_center .txt1 { font-size: 24px; line-height: 30px; font-weight: 300; color: white; text-transform: uppercase; position: relative; padding-top: 11px; display: inline-block; }
+.pos-slideshow-info .desc_center .txt1:after { content: ""; position: absolute; top: 0; left: 0; width: 100%; border-top: 4px solid #fff; }
+.pos-slideshow-info .desc_center .txt2 { font-size: 4vw; line-height: 4.5vw; font-weight: 700; color: white; text-transform: capitalize; }

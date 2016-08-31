@@ -1,0 +1,294 @@
+@import "compass";
+@import "theme_variables";
+
+$parent-item: 33px;
+$col-width: 160px;
+$title-height: 35px;
+$menu_border: #303030;
+
+.megamenu_container{
+	margin: 55px 0 49px;
+	float: left;
+	position: relative;
+	.btn_tgl{
+		float: left;
+		font-size: 16px;
+		font-weight: 700;
+		letter-spacing: 0.02em;
+		color: $dark-color;
+		position: relative;
+		i{
+			padding-right: 11px;
+		}
+	}
+}
+.content_tgl{
+	display: none;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.85);
+	z-index: 9999;
+	padding-top: 21vw;
+	@media (max-width: $screen-xs-max){
+		display: block !important;
+		position: static;
+		background: none;
+		padding: 0 15px;
+	}
+	.close_box{
+		position: absolute;
+		top: 2vw;
+		right: 3vw;
+		cursor: pointer;
+		display: block;
+		width: 31px;
+		height: 31px;
+		@include transition(all 500ms ease);
+		@media (max-width: $screen-xs-max){
+			display: none;
+		}
+		&:before, &:after{
+			content: "";
+			display: block;
+			position: absolute;
+			@include transform(rotate(45deg));
+		}
+		&:before{
+			top: 14px;
+			left: 0;
+			width: 100%;
+			border-bottom: 3px solid #fff;
+		}
+		&:after{
+			top: 0;
+			left: 14px;
+			height: 100%;
+			border-right: 3px solid #fff;
+		}
+		&:hover{
+			@include animation(spinfont 2500ms linear infinite);
+		}
+	}
+}
+.pt_custommenu{
+	position: relative;
+	line-height: 1;
+	.pt_menu{
+		display: inline-block;
+		text-align: left;
+		vertical-align: bottom;
+		.parentMenu {
+			a{
+				display: block;
+				overflow: hidden;
+				position: relative;
+				margin: 0;
+				padding: 0 15px;
+				line-height: $parent-item;
+				color: $light-text-color;
+				text-transform: capitalize;
+				letter-spacing: 0.2em;
+				font:{
+					size: 18px;
+					weight: 700;
+				}
+				i{
+					font-size: 12px;
+					line-height: $parent-item;
+					float: right;
+					padding: 0 0 0 5px;
+					&:before{
+						content: "\f107";
+					}
+				}
+			}
+		}
+		.popup{
+			position: absolute;
+			background: $light-background;
+			border: $main-border;
+			@media (max-width: 1199px){
+				left: 0 !important;
+				width: 100% !important;
+			}
+			.block1{
+				overflow: hidden;
+				float: left;
+				padding: 30px;
+				.column{
+					float: left;
+					width: $col-width;
+					padding: 0;
+					margin: 0 20px;
+					margin-bottom: -99999px;
+					padding-bottom: 99999px;
+					.itemMenuName{
+						@extend .oneline;
+						color: $dark-color;
+						line-height: $title-height;
+						text-transform: capitalize;
+						margin-bottom: 15px;
+						border-bottom: $main-border;
+						font-weight: 600;
+						font:{
+							size: 16px;
+						}
+						&:hover{
+							color: $main-color;
+						}
+						&.nochild{
+							padding: 0;
+							background: none;
+							border-bottom: 0;
+							margin: 0;
+						}
+					}
+					.itemSubMenu{
+						padding: 0;
+						.itemMenuName{
+							line-height: 35px;
+							padding: 0;
+							text-transform: capitalize;
+							background: none;
+							color: #777;
+							border-bottom: 0;
+							margin: 0;
+							font:{
+								size: 15px;
+								weight: 600;
+							}
+							&:before{
+								content: "\f101";
+								display: block;
+								line-height: 35px;
+								float: left;
+								padding-right: 7px;
+								font:{
+									family: $font-icon;
+									size: 12px;
+									weight: 400;
+								}
+							}
+							&:hover{
+								color: $main-color;
+							}
+						}
+					}
+				}
+			}
+		}
+		&.act, &.active{
+			.parentMenu a{
+				color: $main-color;
+			}
+		}
+	}
+}
+
+.pt_custommenu_mobile{
+	text-align: left;
+	position: static;
+	background: $dark-background;
+	padding: 0 15px;
+	margin: 30px 0;
+    clear: both;
+    float: left;
+    width: 100%;
+	.navbar{
+		min-height: $title-height;
+		margin: 0;
+		border: 0;
+		position: static;
+		.navbar-inner{
+			.btn-navbar{
+				display: block;
+				color: $light-text-color;
+				@extend .oneline;
+				position: relative;
+				margin: 0;
+				line-height: 55px;
+				text-transform: uppercase;
+				font:{
+					size: 14px;
+					weight: 600;
+				}
+				&:after{
+					display: block;
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: $title-height;
+					height: $title-height;
+					text-align: center;
+					color: $light-text-color;
+					font:{
+						size: 15px;
+						weight: 400;
+						family: $font-icon;
+					}
+				}
+			}
+			&.navbar-inactive .btn-navbar:after{
+				content: "\f055";
+			}
+			&.navbar-active .btn-navbar:after{
+				content: "\f056";
+			}
+		}
+	}
+}
+ul#pt_custommenu_itemmobile{
+	overflow: hidden;
+	margin: 0 0 15px;
+	padding: 0;
+	li{
+		background: #fff;
+		cursor: pointer;
+		list-style-type: none;
+		padding: 0 20px;
+		margin: 0;
+		display: block;
+		position: relative;
+		a{
+			@extend .oneline;
+			line-height: $title-height;
+			text-transform: capitalize;
+			text-decoration: none;
+			font:{
+				size: 15px;
+				weight: 700;
+			}
+			&:hover{
+				color: $main-color;
+			}
+		}
+		.grower{
+			position: absolute;
+			top: 0;
+			right: 0;
+			a:after{
+				display: block;
+				width: $title-height;
+				height: $title-height;
+				text-align: center;
+				color: $dark-color;
+				font:{
+					size: 13px;
+					weight: 400;
+					family: $font-icon;
+				}
+			}
+			&.CLOSE a:after{
+				content: "\f055";
+			}
+			&.OPEN a:after{
+				content: "\f056";
+			}
+		}
+	}
+}

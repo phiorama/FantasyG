@@ -1,0 +1,126 @@
+@import "compass";
+@import "theme_variables";
+
+.product_content.grid .item .right-block{
+	.btn_list, .hook-reviews, .product-desc{
+		display: none;
+	}
+}
+.product_content.list .item{
+	.left-block{
+		.quick-view-lg, .btn_container{
+			display: none !important;
+		}
+		img{
+			margin: 0;
+		}
+		@media (max-width: $screen-xs-max){
+			.percent-reduction{
+				right: auto;
+				left: 30px;
+				top: 85px;
+			}
+		}
+	}
+	.right-block{
+		text-align: left;
+		h5{
+			margin: 35px 0 0;
+			a{
+				font-size: 24px;
+				line-height: 27px;
+				font-weight: 700;
+				letter-spacing: 0;
+				color: $dark-color;
+				&:hover{
+					color: $main-color;
+				}
+			}
+		}
+		.hook-reviews{
+			overflow: hidden;
+			margin-top: 15px;
+		}
+		.price-box{
+			margin-top: 21px;
+			span{
+				font-size: 24px;
+				font-weight: 700;
+				line-height: 27px;
+				margin: 0 11px 0 0;
+			}
+		}
+		.product-desc{
+			margin: 25px 0 0;
+			font-size: 16px;
+			line-height: 24px;
+			color: $dark-color;
+		}
+		.btn_list{
+			margin-top: 30px;
+			.exclusive{
+				margin: 10px 15px 0 0;
+				float: left;
+				overflow: hidden;
+				display: block;
+				border: 0;
+				padding: 0;
+				line-height: 40px;
+				background: $dark-color;
+				color: $light-text-color;
+				font-size: 14px;
+				font-weight: 700;
+				text-transform: uppercase;
+				i{
+					display: block;
+					float: left;
+					padding: 0 15px;
+					border-right: 1px solid #464646;
+					line-height: 40px;
+					font-size: 18px;
+					@include transition(all 300ms ease);
+				}
+				span{
+					overflow: hidden;
+					padding: 0 15px;
+				}
+				&:hover{
+					background: $main-color;
+					i{
+						border-color: lighten($main-color, 50%);
+					}
+				}
+			}
+			.quick-view, .addToWishlist, .add_to_compare{
+				display: block;
+				float: left;
+				width:  45px;
+				height: 40px;
+				line-height: 37px;
+				margin: 10px 5px 0 0;
+				background: #f6f6f6;
+				color: $dark-color;
+				font-size: 18px;
+				padding: 3px 0 0;
+				font-weight: 400;
+				text-align: center;
+				border: 0;
+				text-align: center;
+				i{
+					display: inline-block;
+				}
+				&.checked, &:hover{
+					color: $main-color;
+				}
+				&.checked i{
+					@include animation(spin 500ms linear);
+				}
+			}
+			@media (max-width: $screen-xs-max){
+				.quick-view{
+					clear: both;
+				}
+			}
+		}
+	}
+}
